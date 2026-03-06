@@ -2,3 +2,4 @@ __pycache__
 .env
 model
 wellpaw-model-vm-script.sh
+*.json

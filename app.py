@@ -101,6 +101,10 @@ def predict_cat():
 
     return jsonify(res)
 
+@app.route('/healthz', methods=['GET'])
+def healthcheck():
+    return {"status": 200}
+
 if __name__ == '__main__':
-    port = int(os.environ.get("APP_PORT", 50002))
+    port = int(os.environ.get("PORT", 50002))
     app.run(host='0.0.0.0', port=port)

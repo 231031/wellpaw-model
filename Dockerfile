@@ -14,6 +14,8 @@ WORKDIR /app
 COPY --from=builder /install /usr/local
 COPY . .
 
-ENV APP_PORT=50002
+RUN mkdir -p /app/model
 
-CMD gunicorn --bind 0.0.0.0:$APP_PORT --workers 1 --threads 2 app:app
+ENV PORT=50002
+
+CMD gunicorn --bind 0.0.0.0:$PORT --workers 1 --threads 2 app:app

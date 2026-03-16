@@ -19,4 +19,4 @@ RUN mkdir -p /app/model
 
 ENV PORT=50002
 
-CMD gunicorn --bind 0.0.0.0:$PORT --workers 3 --threads 100 app:app
+CMD gunicorn --bind 0.0.0.0:$PORT --workers 4 --threads 4 --timeout 120 app:app

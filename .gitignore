@@ -3,3 +3,4 @@ __pycache__
 model
 wellpaw-model-vm-script.sh
 *.json
+export_onnx.py
